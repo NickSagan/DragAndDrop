@@ -8,21 +8,30 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Emoji Art Document View Controller-->
         <scene sceneID="uYb-Cg-1Vx">
             <objects>
-                <tableViewController id="idn-x9-fVT" sceneMemberID="viewController">
+                <tableViewController id="idn-x9-fVT" customClass="EmojiArtDocumentViewController" customModule="DragAndDrop" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="vKZ-dN-Hf3">
                         <rect key="frame" x="0.0" y="0.0" width="420" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="lIy-U0-HEN">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DocumentCell" textLabel="9ox-xt-649" style="IBUITableViewCellStyleDefault" id="lIy-U0-HEN">
                                 <rect key="frame" x="0.0" y="44.5" width="420" height="51.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lIy-U0-HEN" id="V4z-Oe-Ewl">
                                     <rect key="frame" x="100" y="0.0" width="320" height="51.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9ox-xt-649">
+                                            <rect key="frame" x="16" y="0.0" width="288" height="51.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -31,7 +40,17 @@
                             <outlet property="delegate" destination="idn-x9-fVT" id="wLR-fn-M3m"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="xUk-cm-CF6"/>
+                    <toolbarItems>
+                        <barButtonItem title="Item" id="oAX-t7-cEk"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" id="xUk-cm-CF6">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ANT-yn-C5L">
+                            <connections>
+                                <action selector="newEmojiArt:" destination="idn-x9-fVT" id="1RB-gA-jcb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8DX-xn-4av" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
