@@ -8,16 +8,45 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Table View Controller-->
+        <scene sceneID="uYb-Cg-1Vx">
+            <objects>
+                <tableViewController id="idn-x9-fVT" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="vKZ-dN-Hf3">
+                        <rect key="frame" x="0.0" y="0.0" width="420" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="lIy-U0-HEN">
+                                <rect key="frame" x="0.0" y="44.5" width="420" height="51.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lIy-U0-HEN" id="V4z-Oe-Ewl">
+                                    <rect key="frame" x="100" y="0.0" width="320" height="51.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="idn-x9-fVT" id="lar-Xu-ugN"/>
+                            <outlet property="delegate" destination="idn-x9-fVT" id="wLR-fn-M3m"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="xUk-cm-CF6"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8DX-xn-4av" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="49" y="-725"/>
+        </scene>
         <!--Emoji Art View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="EmojiArtViewController" customModule="DragAndDrop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="704" height="944"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BEy-iJ-FnV">
-                                <rect key="frame" x="0.0" y="24" width="1366" height="980"/>
+                                <rect key="frame" x="0.0" y="0.0" width="704" height="944"/>
                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fDo-VU-eIF" customClass="EmojiArtView" customModule="DragAndDrop" customModuleProvider="target">
@@ -49,6 +78,37 @@
                 </view>
             </objects>
             <point key="canvasLocation" x="29.868228404099558" y="79.6875"/>
+        </scene>
+        <!--Split View Controller-->
+        <scene sceneID="Px9-uJ-8NE">
+            <objects>
+                <splitViewController allowDoubleColumnStyle="YES" id="HOT-Up-fKP" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="showDetail" id="mZH-5f-QZs"/>
+                        <segue destination="BRM-4N-lDc" kind="relationship" relationship="masterViewController" id="wF0-4v-DKr"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ttm-B6-mvQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-599" y="80"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Vkn-IY-9eS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BRM-4N-lDc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rLk-dc-Oyb">
+                        <rect key="frame" x="0.0" y="24" width="420" height="50"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="idn-x9-fVT" kind="relationship" relationship="rootViewController" id="rft-f0-dMr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ozn-Cm-YyL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-645" y="-725"/>
         </scene>
     </scenes>
     <resources>
