@@ -15,6 +15,7 @@
 		912EEED62777520B0065D68B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 912EEED42777520B0065D68B /* LaunchScreen.storyboard */; };
 		912EEEDE277752D80065D68B /* EmojiArtView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912EEEDD277752D80065D68B /* EmojiArtView.swift */; };
 		912EEEE127775CA80065D68B /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912EEEE027775CA80065D68B /* Utilities.swift */; };
+		912EEEE527776A170065D68B /* EmojiArtDocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912EEEE427776A170065D68B /* EmojiArtDocumentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		912EEED72777520B0065D68B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		912EEEDD277752D80065D68B /* EmojiArtView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiArtView.swift; sourceTree = "<group>"; };
 		912EEEE027775CA80065D68B /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		912EEEE427776A170065D68B /* EmojiArtDocumentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiArtDocumentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				912EEEDF277753FB0065D68B /* Supporting files */,
 				912EEED72777520B0065D68B /* Info.plist */,
 				912EEEE027775CA80065D68B /* Utilities.swift */,
+				912EEEE427776A170065D68B /* EmojiArtDocumentViewController.swift */,
 			);
 			path = DragAndDrop;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 			files = (
 				912EEECE277752060065D68B /* EmojiArtViewController.swift in Sources */,
 				912EEECA277752060065D68B /* AppDelegate.swift in Sources */,
+				912EEEE527776A170065D68B /* EmojiArtDocumentViewController.swift in Sources */,
 				912EEECC277752060065D68B /* SceneDelegate.swift in Sources */,
 				912EEEE127775CA80065D68B /* Utilities.swift in Sources */,
 				912EEEDE277752D80065D68B /* EmojiArtView.swift in Sources */,
