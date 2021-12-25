@@ -8,7 +8,7 @@
 import UIKit
 
 class EmojiArtViewController: UIViewController, UIDropInteractionDelegate {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -28,9 +28,26 @@ class EmojiArtViewController: UIViewController, UIDropInteractionDelegate {
         return UIDropProposal(operation: .copy)
     }
     
+    var imageFetcher: ImageFetcher!
+    
     func dropInteraction(_ interaction: UIDropInteraction, performDrop session: UIDropSession) {
-        session.loadObjects(ofClass: NSURL.self) { images in
-            <#code#>
+        
+        imageFetcher = ImageFetcher() { (url, image) in
+            DispatchQueue.main.async {
+                self.emojiArtView.backgroundImage = image
+            }
+            
+        }
+        
+        session.loadObjects(ofClass: NSURL.self) { nsurls in
+            if let url = nsurls.first as? URL {
+                self.imageFetcher.fetch(url)
+            }
+        }
+        session.loadObjects(ofClass: UIImage.self) { images in
+            if let image = images.first as? UIImage {
+                self.imageFetcher.backup = image
+            }
         }
     }
     @IBOutlet weak var emojiArtView: EmojiArtView!
