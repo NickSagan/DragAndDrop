@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		912EEECA277752060065D68B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912EEEC9277752060065D68B /* AppDelegate.swift */; };
 		912EEECC277752060065D68B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912EEECB277752060065D68B /* SceneDelegate.swift */; };
-		912EEECE277752060065D68B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912EEECD277752060065D68B /* ViewController.swift */; };
+		912EEECE277752060065D68B /* EmojiArtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912EEECD277752060065D68B /* EmojiArtViewController.swift */; };
 		912EEED1277752060065D68B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 912EEECF277752060065D68B /* Main.storyboard */; };
 		912EEED32777520B0065D68B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 912EEED22777520B0065D68B /* Assets.xcassets */; };
 		912EEED62777520B0065D68B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 912EEED42777520B0065D68B /* LaunchScreen.storyboard */; };
+		912EEEDE277752D80065D68B /* EmojiArtView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912EEEDD277752D80065D68B /* EmojiArtView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		912EEEC6277752060065D68B /* DragAndDrop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragAndDrop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		912EEEC9277752060065D68B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		912EEECB277752060065D68B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		912EEECD277752060065D68B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		912EEECD277752060065D68B /* EmojiArtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiArtViewController.swift; sourceTree = "<group>"; };
 		912EEED0277752060065D68B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		912EEED22777520B0065D68B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		912EEED52777520B0065D68B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		912EEED72777520B0065D68B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		912EEEDD277752D80065D68B /* EmojiArtView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiArtView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,24 @@
 		912EEEC8277752060065D68B /* DragAndDrop */ = {
 			isa = PBXGroup;
 			children = (
-				912EEEC9277752060065D68B /* AppDelegate.swift */,
-				912EEECB277752060065D68B /* SceneDelegate.swift */,
-				912EEECD277752060065D68B /* ViewController.swift */,
+				912EEECD277752060065D68B /* EmojiArtViewController.swift */,
+				912EEEDD277752D80065D68B /* EmojiArtView.swift */,
 				912EEECF277752060065D68B /* Main.storyboard */,
-				912EEED22777520B0065D68B /* Assets.xcassets */,
-				912EEED42777520B0065D68B /* LaunchScreen.storyboard */,
+				912EEEDF277753FB0065D68B /* Supporting files */,
 				912EEED72777520B0065D68B /* Info.plist */,
 			);
 			path = DragAndDrop;
+			sourceTree = "<group>";
+		};
+		912EEEDF277753FB0065D68B /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				912EEEC9277752060065D68B /* AppDelegate.swift */,
+				912EEECB277752060065D68B /* SceneDelegate.swift */,
+				912EEED22777520B0065D68B /* Assets.xcassets */,
+				912EEED42777520B0065D68B /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +149,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				912EEECE277752060065D68B /* ViewController.swift in Sources */,
+				912EEECE277752060065D68B /* EmojiArtViewController.swift in Sources */,
 				912EEECA277752060065D68B /* AppDelegate.swift in Sources */,
 				912EEECC277752060065D68B /* SceneDelegate.swift in Sources */,
+				912EEEDE277752D80065D68B /* EmojiArtView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,7 +307,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationLandscapeRight;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -306,7 +318,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -323,7 +335,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationLandscapeRight;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -334,7 +346,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
