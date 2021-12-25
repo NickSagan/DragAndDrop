@@ -119,7 +119,7 @@ extension UIImage
     }
     
     func storeLocallyAsJPEG(named name: String) -> URL? {
-        if let imageData = UIImageJPEGRepresentation(self, 1.0) {
+        if let imageData = self.jpegData(compressionQuality: 1.0) {
             if let url = UIImage.urlToStoreLocallyAsJPEG(named: name) {
                 do {
                     try imageData.write(to: url)
@@ -165,7 +165,7 @@ extension NSAttributedString {
 }
 
 extension String {
-    func attributedString(withTextStyle style: UIFontTextStyle, ofSize size: CGFloat) -> NSAttributedString {
+    func attributedString(withTextStyle style: UIFont.TextStyle, ofSize size: CGFloat) -> NSAttributedString {
         let font = UIFontMetrics(forTextStyle: .body).scaledFont(for: UIFont.preferredFont(forTextStyle: .body).withSize(size))
         return NSAttributedString(string: self, attributes: [.font:font])
     }
