@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HOT-Up-fKP">
     <device id="ipad12_9rounded" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
@@ -54,7 +54,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8DX-xn-4av" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="49" y="-725"/>
+            <point key="canvasLocation" x="741" y="-691"/>
         </scene>
         <!--Emoji Art View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -66,12 +66,20 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BEy-iJ-FnV">
                                 <rect key="frame" x="0.0" y="0.0" width="704" height="944"/>
+                                <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uH9-f2-S9t">
+                                        <rect key="frame" x="0.0" y="8" width="696" height="928"/>
+                                        <viewLayoutGuide key="contentLayoutGuide" id="3OA-ZZ-dg5"/>
+                                        <viewLayoutGuide key="frameLayoutGuide" id="l1J-YK-Kmm"/>
+                                    </scrollView>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fDo-VU-eIF" customClass="EmojiArtView" customModule="DragAndDrop" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="22" width="1366" height="980"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="uH9-f2-S9t" firstAttribute="leading" secondItem="BEy-iJ-FnV" secondAttribute="leading" id="SV1-2Y-ZkD"/>
+                                    <constraint firstAttribute="trailing" secondItem="uH9-f2-S9t" secondAttribute="trailing" id="VX0-9C-p8S"/>
+                                    <constraint firstAttribute="bottom" secondItem="uH9-f2-S9t" secondAttribute="bottom" id="XTg-CZ-a0d"/>
+                                    <constraint firstItem="uH9-f2-S9t" firstAttribute="top" secondItem="BEy-iJ-FnV" secondAttribute="top" id="yw2-Cc-xZ6"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -85,18 +93,12 @@
                     </view>
                     <connections>
                         <outlet property="dropZone" destination="BEy-iJ-FnV" id="7dW-nQ-mim"/>
-                        <outlet property="emojiArtView" destination="fDo-VU-eIF" id="KQd-g1-ixX"/>
+                        <outlet property="scrollView" destination="uH9-f2-S9t" id="CHQ-eq-Z0E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <view contentMode="scaleToFill" id="F9x-Bl-9TD">
-                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <viewLayoutGuide key="safeArea" id="jUP-lQ-dFB"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                </view>
             </objects>
-            <point key="canvasLocation" x="29.868228404099558" y="79.6875"/>
+            <point key="canvasLocation" x="46.998535871156655" y="458.78906249999994"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="Px9-uJ-8NE">
@@ -109,7 +111,7 @@
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ttm-B6-mvQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-599" y="80"/>
+            <point key="canvasLocation" x="-930" y="-59"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Vkn-IY-9eS">
@@ -127,7 +129,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ozn-Cm-YyL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-645" y="-725"/>
+            <point key="canvasLocation" x="47" y="-691"/>
         </scene>
     </scenes>
     <resources>
