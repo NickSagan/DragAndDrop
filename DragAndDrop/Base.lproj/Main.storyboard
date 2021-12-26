@@ -60,15 +60,19 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="EmojiArtViewController" customModule="DragAndDrop" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="704" height="944"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BEy-iJ-FnV">
-                                <rect key="frame" x="0.0" y="0.0" width="704" height="944"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BEy-iJ-FnV">
+                                <rect key="frame" x="0.0" y="0.0" width="700" height="944"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uH9-f2-S9t">
                                         <rect key="frame" x="0.0" y="8" width="696" height="928"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="700" id="fdm-nF-EFD"/>
+                                            <constraint firstAttribute="width" constant="700" id="x9a-Pp-AR0"/>
+                                        </constraints>
                                         <viewLayoutGuide key="contentLayoutGuide" id="3OA-ZZ-dg5"/>
                                         <viewLayoutGuide key="frameLayoutGuide" id="l1J-YK-Kmm"/>
                                     </scrollView>
