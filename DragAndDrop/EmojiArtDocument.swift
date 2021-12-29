@@ -34,7 +34,7 @@ class EmojiArtDocument: UIDocument
     // to the dictionary of "file attributes" on the file UIDocument writes
     // the added key-value pair sets a thumbnail UIImage for the UIDocument
     
-    override func fileAttributesToWrite(to url: URL, for saveOperation: UIDocumentSaveOperation) throws -> [AnyHashable : Any] {
+    override func fileAttributesToWrite(to url: URL, for saveOperation: UIDocument.SaveOperation) throws -> [AnyHashable : Any] {
         var attributes = try super.fileAttributesToWrite(to: url, for: saveOperation)
         if let thumbnail = self.thumbnail {
             attributes[URLResourceKey.thumbnailDictionaryKey] = [URLThumbnailDictionaryItem.NSThumbnail1024x1024SizeKey:thumbnail]
