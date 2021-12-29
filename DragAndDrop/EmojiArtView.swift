@@ -7,7 +7,7 @@
 
 import UIKit
 
-class EmojiArtView: UIView, UIDropInteractionDelegate {
+class/Users/nikolai/Downloads/CS193P-Fall-2017-DEMO-master/EmojiArt L17/EmojiArt/Base.lproj/Main.storyboard EmojiArtView: UIView, UIDropInteractionDelegate {
     // MARK: - Initialization
 
     override init(frame: CGRect) {
