@@ -50,9 +50,9 @@ class EmojiArtViewController: UIViewController, UIDropInteractionDelegate, UIScr
     // eliminating the need to create the file in the file system
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        if let image = ((info[UIImagePickerControllerEditedImage] ?? info[UIImagePickerControllerOriginalImage]) as? UIImage)?.scaled(by: 0.25) {
+        if let image = ((info[UIImagePickerController.InfoKey.editedImage.rawValue] ?? info[UIImagePickerController.InfoKey.originalImage.rawValue]) as? UIImage)?.scaled(by: 0.25) {
 //            let url = image.storeLocallyAsJPEG(named: String(Date.timeIntervalSinceReferenceDate))
-            if let imageData = UIImageJPEGRepresentation(image, 1.0) {
+            if let imageData = image.jpegData(compressionQuality: 1.0) {
                 emojiArtBackgroundImage = .local(imageData, image)
                 documentChanged()
             } else {
@@ -204,7 +204,7 @@ class EmojiArtViewController: UIViewController, UIDropInteractionDelegate, UIScr
         super.viewWillAppear(animated)
         if document?.documentState != .normal {
             documentObserver = NotificationCenter.default.addObserver(
-                forName: Notification.Name.UIDocumentStateChanged,
+                forName: UIApplication.didEnterBackgroundNotification,
                 object: document,
                 queue: OperationQueue.main,
                 using: { notification in
@@ -482,7 +482,7 @@ class EmojiArtViewController: UIViewController, UIDropInteractionDelegate, UIScr
                     // (because the dragged-in URL was no good)
                     // we'll use the image that was dragged in
                     // and embed it in our document (i.e. the .local case)
-                    if let imageData = UIImageJPEGRepresentation(image, 1.0) {
+                    if let imageData = image.jpegData(compressionQuality: 1.0) {
                         self.emojiArtBackgroundImage = .local(imageData, image)
                         self.documentChanged()
                     } else {
